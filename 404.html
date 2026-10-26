@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>前往中…｜何政學</title>
+<!-- 短網址轉址：GitHub Pages 找不到的路徑都會來到這頁，從 links.js 查代碼後跳轉 -->
+<script src="/links.js"></script>
+<script>
+  (function () {
+    var code = decodeURIComponent(location.pathname).replace(/^\/+|\/+$/g, '').toLowerCase();
+    var to = (typeof LINKS === 'object' && LINKS[code]) || null;
+    if (to) location.replace(to);
+    else window.__missing = code;
+  })();
+</script>
+<style>
+  :root{--bg:#f5f6f3;--ink:#16212b;--mute:#58646f;--accent:#d8901f}
+  @media (prefers-color-scheme: dark){:root{--bg:#11161b;--ink:#e6eaee;--mute:#97a3ad;--accent:#efa93a;color-scheme:dark}}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);
+    font-family:"Noto Sans TC",system-ui,-apple-system,"Microsoft JhengHei",sans-serif;padding:16px;box-sizing:border-box;text-align:center}
+  h1{font-size:22px;margin:0 0 8px}
+  p{color:var(--mute);margin:0 0 20px}
+  a{color:var(--ink);text-underline-offset:4px}
+  code{font-family:ui-monospace,Consolas,monospace;color:var(--accent)}
+</style>
+</head>
+<body>
+  <main id="msg">
+    <h1>正在前往…</h1>
+  </main>
+  <script>
+    if (window.__missing !== undefined) {
+      var m = document.getElementById('msg');
+      m.innerHTML = '<h1>找不到這個網址</h1><p>代碼 <code></code> 不存在，可能打錯字或已經停用。</p><a href="/">回到首頁</a>';
+      m.querySelector('code').textContent = window.__missing || '（空白）';
+    }
+  </script>
+</body>
+</html>
