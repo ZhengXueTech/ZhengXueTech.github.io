@@ -65,6 +65,7 @@ a.card:hover{border-color:var(--accent);transform:translateY(-2px)}
 .card p{margin:0;color:var(--mute);font-size:15px;line-height:1.65}
 .card .go{margin-top:auto;padding-top:6px;font-family:var(--f-mono);font-size:13px;color:var(--ink)}
 .card.soon{border-style:dashed;background:transparent}
+.card.feature{grid-column:1/-1}
 .card.soon .go{color:var(--mute)}
 
 /* 在做的事 */
@@ -195,6 +196,7 @@ footer a{text-underline-offset:3px}
 // status: 'live' 已上線（可點）／'soon' 準備上架
 const WORKS = [
   { tag: '品牌', brand: true, title: '學思創客', desc: '雷切平衡玩具 STEAM 課程：平衡鳥、平衡太空站，從國中到國小都能做。', url: 'https://sites.google.com/view/xuemmaker/', status: 'live' },
+  { tag: '課程', title: '平衡科學玩具世界', desc: '老鷹、鵜鶘、國際太空站三件雷切平衡玩具：3D 組裝圖、重心模擬、AR 平衡挑戰，附雷切檔與紙板原型。', url: '/balance-toys/', status: 'live' },
   { tag: '模擬器', title: '學思無人機模擬器', desc: '免安裝的網頁無人機訓練平台，含 11 關飛行訓練、足球無人機與多人版本。', url: 'https://sites.google.com/view/xuerobot', status: 'live' },
   { tag: '工具', title: 'Maker 檔案檢視器', desc: '在瀏覽器裡看 STL、SVG、DXF：尺寸、重量、切割時間、閉合檢查與重心。', url: '/xuesimaker/viewer/', status: 'live' },
   { tag: '教學網', title: '何老師科技課', desc: '七到九年級生活科技與資訊課的課程、專題與工具，學生上課的入口。', url: 'https://sites.google.com/view/techxinfor/%E9%A6%96%E9%A0%81', status: 'live' },
@@ -203,7 +205,7 @@ const box = document.getElementById('workList');
 for (const w of WORKS) {
   const live = w.status === 'live';
   const el = document.createElement(live ? 'a' : 'div');
-  el.className = 'card' + (live ? '' : ' soon');
+  el.className = 'card' + (live ? '' : ' soon') + (w.brand ? ' feature' : '');
   if (live) { el.href = w.url; if (/^https?:/.test(w.url)) { el.target = '_blank'; el.rel = 'noopener'; } }
   const top = document.createElement('div'); top.className = 'top';
   const tag = document.createElement('span'); tag.className = 'tag' + (w.brand ? ' brand' : ''); tag.textContent = w.tag;

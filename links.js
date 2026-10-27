@@ -7,4 +7,6 @@ const LINKS = {
   "maker":  "https://sites.google.com/view/xuemmaker/",
   "class":  "https://sites.google.com/view/techxinfor/%E9%A6%96%E9%A0%81",
   "cv":     "https://sites.google.com/view/zhengxuehe/",
+  "balance": "https://zhengxuetech.github.io/balance-toys/",
+  "ar":     "https://zhengxuetech.github.io/balance-toys/eagle/ar.html",
 };
