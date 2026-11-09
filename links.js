@@ -11,4 +11,5 @@ const LINKS = {
   "ar":     "https://zhengxuetech.github.io/balance-toys/eagle/ar.html",
   "print":  "https://zhengxuetech.github.io/xuesimaker/viewer/#print",
   "laser":  "https://zhengxuetech.github.io/xuesimaker/viewer/#laser",
+  "ledframe": "https://zhengxuetech.github.io/drone-ledframe/",
 };
