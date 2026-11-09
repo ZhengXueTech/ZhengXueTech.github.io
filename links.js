@@ -9,4 +9,6 @@ const LINKS = {
   "cv":     "https://sites.google.com/view/zhengxuehe/",
   "balance": "https://zhengxuetech.github.io/balance-toys/",
   "ar":     "https://zhengxuetech.github.io/balance-toys/eagle/ar.html",
+  "print":  "https://zhengxuetech.github.io/xuesimaker/viewer/#print",
+  "laser":  "https://zhengxuetech.github.io/xuesimaker/viewer/#laser",
 };
